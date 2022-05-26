@@ -1,20 +1,26 @@
-package com.thread.demo.pojo;
+package com.thread.pojo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 时间 POJO
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 public class DateTime {
 
     private Date date;
 
-    // 时间戳
+    /** 时间戳 */
     private Long timestamp;
 
     private String time;
 
     public DateTime() {
         this.date = new Date();
-        this.timestamp = date.getTime();//System.currentTimeMillis();
+        this.timestamp = date.getTime();
         this.time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
     }
 

@@ -1,13 +1,11 @@
-package com.util.test;
+package com.util;
 
 import com.DemoTestApplication;
-import com.alibaba.fastjson.JSONObject;
 import com.util.LinkedHashMapUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.LinkedHashMap;
-import java.util.Set;
 
 @SpringBootTest(classes = DemoTestApplication.class)
 public class UtilTest {

@@ -1,7 +1,13 @@
-package com.thread.demo.pool;
+package com.thread.pool;
 
 import java.util.concurrent.*;
 
+/**
+ * 线程池
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 public class MyExecutorService {
 
     /**

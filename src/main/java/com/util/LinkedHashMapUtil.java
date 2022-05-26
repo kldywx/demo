@@ -5,8 +5,10 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.*;
 
 /**
- * data conversion : 数据转换
- *  String To LinkedHashMap , LinkedHashMap 取 K 、V 、K-V
+ * 数据转换工具
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
  */
 public class LinkedHashMapUtil {
 

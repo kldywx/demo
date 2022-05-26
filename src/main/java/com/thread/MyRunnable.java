@@ -1,5 +1,11 @@
-package com.thread.demo;
+package com.thread;
 
+/**
+ * 任务
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 public class MyRunnable implements Runnable {
 
     @Override

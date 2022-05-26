@@ -7,6 +7,12 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import java.util.Properties;
 
+/**
+ * 获取配置文件
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 @Configuration
 public class BeanConfiguration {
 

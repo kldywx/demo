@@ -1,9 +1,15 @@
-package com.thread.demo.producer;
+package com.thread.producer;
 
-import com.thread.demo.pool.MyExecutorService;
+import com.thread.pool.MyExecutorService;
 
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * 消费者
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 public class MyProducer {
 
     BlockingQueue<Runnable> queue = null;

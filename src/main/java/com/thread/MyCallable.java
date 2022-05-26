@@ -1,8 +1,14 @@
-package com.thread.demo;
+package com.thread;
 
 import java.util.Date;
 import java.util.concurrent.Callable;
 
+/**
+ * Callable 任务
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 public class MyCallable implements Callable<Object> {
 
     private String taskNum;

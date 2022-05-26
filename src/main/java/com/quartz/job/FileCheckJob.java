@@ -1,4 +1,4 @@
-package com.quartz.test;
+package com.quartz.job;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -11,13 +11,17 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 文件检查任务
+ *
+ * @author 许文博
+ * @date 2022/5/01 10:00
+ */
 public class FileCheckJob implements Job {
 
     private static Logger log = LoggerFactory.getLogger(FileCheckJob.class);
 
     private static String filePath = "C:\\Users\\JK\\Desktop";
-
-//    private String filePath = YamlConfigurerUtil.getStrYmlVal("file.path");
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
