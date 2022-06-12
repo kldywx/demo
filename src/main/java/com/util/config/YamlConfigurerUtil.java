@@ -1,5 +1,9 @@
 package com.util.config;
 
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
 import java.util.Properties;
 
 /**
@@ -10,17 +14,28 @@ import java.util.Properties;
  */
 public class YamlConfigurerUtil {
 
-    private static Properties ymlProperties = new Properties();
+    private Properties ymlProperties = null;
 
-    public YamlConfigurerUtil(Properties properties){
+    public YamlConfigurerUtil(){
+        this("application.yml");
+    }
+
+    public YamlConfigurerUtil(String path){
+        //1:加载配置文件
+        Resource app = new ClassPathResource(path);
+        YamlPropertiesFactoryBean yamlPropertiesFactoryBean = new YamlPropertiesFactoryBean();
+        // 2:将加载的配置文件交给 YamlPropertiesFactoryBean
+        yamlPropertiesFactoryBean.setResources(app);
+        // 3：将yml转换成 key：val
+        Properties properties = yamlPropertiesFactoryBean.getObject();
         ymlProperties = properties;
     }
 
-    public static String getStrYmlVal(String key){
+    public String getStrYmlVal(String key){
         return ymlProperties.getProperty(key);
     }
 
-    public static Integer getIntegerYmlVal(String key){
+    public Integer getIntegerYmlVal(String key){
         return Integer.valueOf(ymlProperties.getProperty(key));
     }
 
