@@ -1,6 +1,6 @@
-package com.thread.producer;
+package com.util.thread.producer;
 
-import com.thread.pool.MyExecutorService;
+import com.util.thread.pool.MyExecutorService;
 
 import java.util.concurrent.BlockingQueue;
 

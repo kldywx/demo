@@ -1,4 +1,4 @@
-package com.quartz.queue;
+package com.util.quartz.queue;
 
 import java.util.Deque;
 import java.util.LinkedList;

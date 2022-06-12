@@ -1,8 +1,7 @@
-package com.thread;
+package com.util.thread;
 
 import com.DemoTestApplication;
-import com.thread.pool.MyExecutorService;
-import com.thread.MyCallable;
+import com.util.thread.pool.MyExecutorService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

@@ -1,4 +1,4 @@
-package com.quartz.schedule;
+package com.util.quartz.schedule;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;

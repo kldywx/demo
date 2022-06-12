@@ -1,8 +1,7 @@
-package com.quartz;
+package com.util.quartz;
 
 import com.DemoTestApplication;
-import com.quartz.job.FileCheckJob;
-import com.quartz.schedule.SchedulerUtil;
+import com.util.quartz.schedule.SchedulerUtil;
 import org.junit.jupiter.api.Test;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -15,21 +14,20 @@ public class QuzrtzTest {
 
     // 测试方法执行失败，main执行成功
     public static void main(String[] args) {
+        String jobName1 = "com.quartz.job.JobTest";
+        String jobName2 = "com.quartz.job.FileCheckJob";
         try {
-            SchedulerUtil.schedulerJob("fileCheckJob","fileCheckJobGroup",
-                    "fileCheckTrigger", "fileCheckTriggerGroup",
-                    "0/10 * * * * ? ", FileCheckJob.class );
-        }catch (Exception e){
-            System.out.println(e);
-        }
-    }
+            SchedulerUtil.schedulerJob("job1","jobGroup1",
+                    "trigger1", "triggerGroup1",
+                    "0/10 * * * * ? ", (Class<? extends Job>) Class.forName(jobName1));
+            SchedulerUtil.schedulerJob("job2","jobGroup2",
+                    "trigger2", "triggerGroup2",
+                    "0/10 * * * * ? ", (Class<? extends Job>) Class.forName(jobName2));
+            List<JobExecutionContext> jobList = SchedulerUtil.getScheduler().getCurrentlyExecutingJobs();
+            for (JobExecutionContext job:jobList){
+                System.out.println(job.toString());
+            }
 
-    @Test
-    public void quzrtz() {
-        try {
-            SchedulerUtil.schedulerJob("fileCheckJob","fileCheckJobGroup",
-                    "fileCheckTrigger", "fileCheckTriggerGroup",
-                    "0/10 * * * * ? ", FileCheckJob.class );
         }catch (Exception e){
             System.out.println(e);
         }

@@ -1,4 +1,4 @@
-package com.thread;
+package com.util.thread;
 
 /**
  * 任务

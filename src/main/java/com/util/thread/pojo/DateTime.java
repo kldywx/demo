@@ -1,4 +1,4 @@
-package com.thread.pojo;
+package com.util.thread.pojo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

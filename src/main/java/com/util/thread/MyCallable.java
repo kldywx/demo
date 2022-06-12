@@ -1,4 +1,4 @@
-package com.thread;
+package com.util.thread;
 
 import java.util.Date;
 import java.util.concurrent.Callable;
