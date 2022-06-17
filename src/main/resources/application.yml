@@ -1,5 +1,6 @@
 test:
   test: 测试
+  num: 110
 
 # 环境配置
 spring:
